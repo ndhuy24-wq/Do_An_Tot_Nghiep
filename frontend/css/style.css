@@ -659,13 +659,7 @@ footer .social-links a:hover {
     box-shadow: 0 6px 16px rgba(228, 32, 34, 0.3);
 }
 
-/* Giao diện giỏ hàng (Cart Page) */
-.cart-page {
-    padding: 12rem 9% 4rem !important;
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: calc(100vh - 12rem);
-}
+
 
 .cart-page h1 {
     font-size: 3.5rem;

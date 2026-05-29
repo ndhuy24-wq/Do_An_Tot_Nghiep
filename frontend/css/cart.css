@@ -19,7 +19,7 @@
 /* page wrapper */
 .cart-page{
   background: var(--bg);
-  padding: 24px 0 40px;
+  padding: 110px 0 40px;
   min-height: 100vh;
 }
 
@@ -120,11 +120,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 520px;
-}
-
-@media (max-width: 520px){
-  .cart-item-left .info h3{ max-width: 220px; }
 }
 
 .cart-item-left .info .price{
@@ -142,6 +137,16 @@
   flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+  .cart-item {
+    grid-template-columns: 1fr;
+  }
+  .cart-item-right {
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}
+
 .item-total{
   min-width: 110px;
   text-align: right;
@@ -149,6 +154,13 @@
   font-size: 14px;
   letter-spacing: .2px;
   color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .item-total {
+    min-width: auto;
+    text-align: left;
+  }
 }
 
 /* qty */
