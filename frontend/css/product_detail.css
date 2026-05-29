@@ -1,197 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: .2s linear;
-    body.product-detail-page {
-    padding-top: 9rem;
-    background: #f0f0f0;
-}
-}
-
-html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-    overflow-x: hidden;
-}
-
-section {
-    padding: 2rem 9%;
-}
-
-.heading {
-    text-align: center;
-    font-size: 4rem;
-    padding: 1rem;
-    margin: 2rem 0;
-    background: rgba(255, 61, 61, 0.21);
-}
-
-.heading span {
-    color: #E42022;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 1rem;
-    border-radius: 2rem;
-    background-color: #f1f2f6;
-    padding: 2rem 3.5rem;
-    cursor: pointer;
-    font-size: 1.7rem;
-    color: #000000;
-}
-
-.btn:hover {
-    background-color: #E42022;
-    color: white;
-}
-
-/* ===== 2. HOME SECTION ===== */
-.home {
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    background: url(../images/legion.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.home .content {
-    max-width: 50rem;
-}
-
-.home .content h3 {
-    font-size: 6rem;
-    color: #dfe4ea;
-
-}
-
-.home .content span {
-    font-size: 3rem;
-    padding: 1rem 0;
-    color: #E42022;
-    font-weight: bold;
-    line-height: 1.5;
-}
-
-.home .content p {
-    font-size: 1.5rem;
-    color: #dfe4ea;
-    padding: 1rem 0;
-    line-height: 1.5;
-}
-
-/* ===== 3. ABOUT SECTION ===== */
-.about .row {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 2rem 0;
-    padding-bottom: 3rem;
-}
-
-.about .row .video-container {
-    flex: 1 1 40rem;
-    position: relative;
-}
-
-.about .row .video-container video {
-    width: 100%;
-    height: 100%;
-    border: 1.5rem solid #eee;
-    border-radius: .5rem;
-    box-shadow: 0 .5rem 1rem rgba (0, 0, 0, .1);
-    object-fit: cover;
-}
-
-.about .row .video-container h3 {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    background: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-    mix-blend-mode: screen;
-}
-
-.about .row .content {
-    flex: 1 1 40rem;
-}
-
-.about .row .content h3 {
-    font-size: 3rem;
-    color: #333;
-}
-
-.about .row .content p {
-    font-size: 1.5rem;
-    color: #666;
-    padding: .5rem 0;
-    padding-top: 1rem;
-    line-height: 1.5;
-}
-
-/* Icons Container dưới About */
-.icons-container {
-    background: #eee;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
-
-.icons-container .icons {
-    background: #fff;
-    border: .1rem solid rgba(0, 0, 0, .1);
-    display: flex;
-    padding: .2rem;
-    align-items: center;
-    flex: 1 1 25rem;
-}
-
-.icons-container .icons img {
-    height: 5rem;
-    margin-right: 2rem;
-}
-
-.icons-container .icons h3 {
-    color: #333;
-    padding-bottom: .5rem;
-    font-size: 1.5rem;
-}
-
-.icons-container .icons span {
-    color: #999;
-    padding-bottom: .5rem;
-    font-size: 1.5rem;
-}
-
-/* ===== 4. PRODUCTS SECTION ===== */
-.products .box-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.products .box-container .box {
-    flex: 1 1 30rem;
-    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-    border-radius: .5rem;
-    border: .1rem solid rgba(0, 0, 0, .1);
-    position: relative;
-    /* Dùng lại cho cart.html, nên loại bỏ các quy tắc trùng lặp */
-}
+/* ===== PRODUCT DETAIL SPECIFIC STYLES ===== */
 
 .product-detail {
     padding: 3rem 8% 4rem;
@@ -235,14 +42,15 @@ section {
     font-weight: bold;
 }
 
-/* --- 3. MAIN WRAPPER (Gallery + Info) (Giữ nguyên) --- */
+/* --- 3. MAIN WRAPPER (Gallery + Info) --- */
 .product-detail-wrapper {
     display: flex;
     gap: 3rem;
     background: #fff;
     padding: 3rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-color);
 }
 
 /* --- 3.1. PRODUCT GALLERY (Giữ nguyên) --- */
@@ -254,10 +62,11 @@ section {
 
 .product-main-image {
     position: relative;
-    border: 1px solid #eee;
-    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
     overflow: hidden;
     margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-soft);
 }
 
 .product-main-image-src {
@@ -290,15 +99,15 @@ section {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border-radius: 6px;
+    border-radius: var(--border-radius-sm);
     border: 2px solid transparent;
     cursor: pointer;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    transition: var(--transition);
 }
 
 .product-thumbnails img.active {
-    border-color: #E42022;
-    box-shadow: 0 0 5px rgba(228, 32, 34, 0.5);
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(228, 32, 34, 0.3);
 }
 
 /* --- 3.2. PRODUCT INFO (Giữ nguyên) --- */
@@ -438,8 +247,8 @@ section {
 .qty-control {
     display: flex;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
     overflow: hidden;
 }
 
@@ -490,27 +299,30 @@ section {
 
 .product-actions .btn-primary {
     flex: 2;
-    background: #E42022;
+    background: var(--text-dark);
     color: #fff;
-    border: 2px solid #E42022;
+    border: 2px solid var(--text-dark);
 }
 
 .product-actions .btn-primary:hover {
-    background: #d11a1a;
-    border-color: #d11a1a;
-    box-shadow: 0 4px 10px rgba(228, 32, 34, 0.3);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 .product-actions .btn-outline {
     flex: 1;
     background: #fff;
-    color: #E42022;
-    border: 2px solid #E42022;
+    color: var(--text-dark);
+    border: 2px solid var(--border-color);
 }
 
 .product-actions .btn-outline:hover {
-    background: #E42022;
-    color: #fff;
+    background: var(--bg-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .product-actions .btn i {
@@ -523,8 +335,8 @@ section {
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 2rem;
-    border: 1px dashed #E42022;
-    border-radius: 8px;
+    border: 1px dashed var(--primary-color);
+    border-radius: var(--border-radius);
     background: #fffafc;
 }
 
@@ -585,10 +397,12 @@ section {
 .tab-content {
     background: #fff;
     padding: 3rem;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
     min-height: 45rem;
     overflow-y: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-color);
+    border-top: none;
     display: none;
 }
 
@@ -652,8 +466,9 @@ section {
     margin-top: 4rem;
     padding: 3rem;
     background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-color);
 }
 
 .related-products-section .heading {

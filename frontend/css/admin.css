@@ -3,31 +3,33 @@
    ========================= */
 
 :root {
-  --bg: #fafafa;
-  --card: #ffffff;
+  --bg: #f9f9fa;
+  --card: rgba(255, 255, 255, 0.95);
 
-  --text: #1f2937;
-  --muted: #6b7280;
+  --text: #111827;
+  --muted: #4b5563;
 
-  --line: #e5e7eb;
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.05);
+  --line: rgba(0, 0, 0, 0.06);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.08);
 
-  --radius: 18px;
-  --radius-sm: 14px;
+  --radius: 14px;
+  --radius-sm: 8px;
 
-  --primary: #e42022;
-  --primary-2: #c91518;
-  --primary-soft: rgba(228, 32, 34, 0.14);
+  --primary: #E42022;
+  --primary-2: #c81a1c;
+  --primary-soft: rgba(228, 32, 34, 0.1);
 
   --danger: #b91c1c;
   --danger-soft: rgba(185, 28, 28, 0.18);
 
-  --sidebar: #e42022;
-  --sidebar-2: #c91518;
-  --sidebar-line: rgba(255, 255, 255, 0.3);
-  --sidebar-text: #ffffff;
-  --sidebar-muted: rgba(255, 255, 255, 0.9);
+  --sidebar: #ffffff;
+  --sidebar-2: #f8f9fa;
+  --sidebar-line: rgba(0, 0, 0, 0.08);
+  --sidebar-text: #111827;
+  --sidebar-muted: #4b5563;
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -41,7 +43,7 @@ body {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--bg);
   color: var(--text);
 }
@@ -88,16 +90,16 @@ button {
   font-size: 16px;
   padding: 14px 12px;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: var(--bg);
+  border: 1px solid var(--sidebar-line);
   margin-bottom: 14px;
-  color: #fff;
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
+  color: var(--sidebar-text);
+  box-shadow: var(--shadow-sm);
 }
 
 .admin-logo span {
-  color: #ffffff;
-  opacity: 0.92;
+  color: var(--primary);
+  opacity: 1;
 }
 
 .admin-menu {
@@ -123,27 +125,32 @@ button {
 .admin-menu a i {
   width: 22px;
   text-align: center;
-  color: #ffffff;
+  color: var(--sidebar-muted);
   opacity: 0.95;
 }
 
 .admin-menu a:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: var(--bg);
+  border-color: var(--sidebar-line);
   transform: translateX(2px);
 }
 
 .admin-menu a.active {
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  background: var(--primary-soft);
+  color: var(--primary);
+  border-color: rgba(228, 32, 34, 0.2);
+  box-shadow: 0 4px 12px rgba(228, 32, 34, 0.05);
+}
+
+.admin-menu a.active i {
+  color: var(--primary);
 }
 
 .admin-sidebar-footer {
   margin-top: 18px;
   padding: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.28);
-  color: rgba(255, 255, 255, 0.92);
+  border-top: 1px solid var(--sidebar-line);
+  color: var(--sidebar-muted);
   font-size: 12px;
 }
 
@@ -163,15 +170,17 @@ button {
 /* ===== Header ===== */
 .admin-header {
   background: var(--card);
-  border: 1px solid #f2dede;
-  border-radius: 22px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
   padding: 20px 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 14px;
   margin-bottom: 18px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .admin-header h1 {
@@ -209,11 +218,14 @@ button {
 /* ===== Sections ===== */
 .admin-section {
   background: var(--card);
-  border: 1px solid #f2dede;
-  border-radius: 22px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 20px;
   margin-bottom: 18px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: var(--transition);
 }
 
 .section-title {

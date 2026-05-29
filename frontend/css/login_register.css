@@ -168,7 +168,7 @@
     text-shadow:
         0 0 6px rgba(255, 255, 255, 0.9),
         0 0 14px rgba(255, 255, 255, 0.8),
-        0 0 22px rgba(255, 82, 82, 0.9);
+        0 0 22px rgba(228, 32, 34, 0.9);
 }
 
 /* Chip trang trí cuối cùng */
@@ -236,11 +236,12 @@
 .soft-form-wrapper {
     width: 90%;
     max-width: 520px;
-    background: #ffffffee;
+    background: rgba(255, 255, 255, 0.92);
     padding: 3rem 2.7rem;
-    border-radius: 32px;
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(6px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-hover);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     position: relative;
     z-index: 1;
     animation: fadeUpSoft 0.9s ease-out 0.2s both;
@@ -249,7 +250,7 @@
 .soft-form-wrapper h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #e53935;
+    color: var(--primary-color);
 }
 
 .soft-input {
@@ -264,49 +265,55 @@
 .soft-input input {
     width: 100%;
     padding: 0.85rem 1rem;
-    border-radius: 14px;
-    border: 1px solid #ccc;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
     font-size: 1.5rem;
     outline: none;
-    transition: 0.2s;
+    transition: var(--transition);
 }
 
 .soft-input input:focus {
-    border-color: #e53935;
-    box-shadow: 0 0 0 3px rgba(229,57,53,0.2);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(228, 32, 34, 0.2);
 }
 
 /* Nút */
 .soft-btn {
     width: 100%;
     padding: 0.9rem 1rem;
-    background: #e53935;
+    background: var(--text-dark);
     border: none;
-    border-radius: 18px;
+    border-radius: var(--border-radius-sm);
     color: white;
     font-size: 1.5rem;
+    font-weight: 600;
     margin-top: 0.5rem;
     cursor: pointer;
-    transition: 0.2s;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
 }
 
 .soft-btn:hover {
-    background: #c62828;
+    background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 .soft-btn-outline {
     width: 100%;
     padding: 0.9rem 1rem;
-    border-radius: 18px;
-    border: 2px solid #ddd;
+    border-radius: var(--border-radius-sm);
+    border: 2px solid var(--border-color);
     background: white;
     font-size: 1.5rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.2s;
+    transition: var(--transition);
 }
 
 .soft-btn-outline:hover {
-    background: #f7f7f7;
+    background: var(--bg-light);
+    border-color: var(--text-light);
 }
 
 /* Divider */
@@ -343,7 +350,7 @@
 }
 
 .soft-switch a {
-    color: #e53935;
+    color: var(--primary-color);
     font-weight: 600;
 }
 

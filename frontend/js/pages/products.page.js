@@ -9,7 +9,8 @@
   }
 
   function createProductBoxHtml(product) {
-    const discountText = product.discount ? `-${product.discount}%` : "";
+    const discountVal = String(product.discount || "").replace("-", "").replace("%", "").trim();
+    const discountText = (discountVal && discountVal !== "0") ? `-${discountVal}%` : "";
     const discountHtml = discountText ? `<span class="discount">${discountText}</span>` : "";
     const oldPriceHtml = product.oldPrice && Number(product.oldPrice) > 0
       ? `<span>${namespace.utils.formatOptionalMoney(product.oldPrice)}</span>`

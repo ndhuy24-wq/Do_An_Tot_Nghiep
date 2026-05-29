@@ -13,7 +13,9 @@
   }
 
   function createRelatedProductBoxHtml(product) {
-    const discountHtml = product.discount ? `<span class="discount">${product.discount}</span>` : "";
+    const discountVal = String(product.discount || "").replace("-", "").replace("%", "").trim();
+    const discountText = (discountVal && discountVal !== "0") ? `-${discountVal}%` : "";
+    const discountHtml = discountText ? `<span class="discount">${discountText}</span>` : "";
     const oldPriceHtml = product.oldPrice && Number(product.oldPrice) > 0
       ? `<span>${namespace.utils.formatOptionalMoney(product.oldPrice)}</span>`
       : "";
@@ -98,8 +100,10 @@
 
     const discountBadge = document.querySelector(".discount-badge");
     if (discountBadge) {
-      discountBadge.textContent = product.discount || "";
-      discountBadge.style.display = product.discount ? "block" : "none";
+      const discountVal = String(product.discount || "").replace("-", "").replace("%", "").trim();
+      const discountText = (discountVal && discountVal !== "0") ? `-${discountVal}%` : "";
+      discountBadge.textContent = discountText;
+      discountBadge.style.display = discountText ? "block" : "none";
     }
 
     const skuEl = document.querySelector(".product-sku");
