@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yêu Cầu Dịch Vụ Laptop - HUI LEGION</title>
+    <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="shortcut icon" href="../Images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/service_request.css">
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <section class="service-request-page">
+        <div class="service-request-card">
+            <div class="service-request-head">
+                <h1>Gửi Yêu Cầu Dịch Vụ Laptop</h1>
+                <p>Điền thông tin để gửi yêu cầu sửa chữa, nâng cấp hoặc bảo trì laptop.</p>
+                <span class="service-request-badge">HUI LEGION SERVICE</span>
+            </div>
+
+            <form id="service-request-form" class="service-request-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customer-name">Họ và tên</label>
+                        <input type="text" id="customer-name" placeholder="Nhập họ và tên">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customer-phone">Số điện thoại</label>
+                        <input type="text" id="customer-phone" placeholder="Nhập số điện thoại">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customer-email">Email</label>
+                        <input type="email" id="customer-email" placeholder="Nhập email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service-type">Loại dịch vụ</label>
+                        <select id="service-type">
+                            <option value="repair">Sửa chữa</option>
+                            <option value="upgrade">Nâng cấp</option>
+                            <option value="maintenance">Bảo trì</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="device-name">Tên máy</label>
+                        <input type="text" id="device-name" placeholder="Ví dụ: Laptop gaming, laptop văn phòng...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="brand">Hãng</label>
+                        <input type="text" id="brand" placeholder="Ví dụ: Dell, Asus, HP, Lenovo...">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="issue-description">Mô tả yêu cầu</label>
+                    <textarea id="issue-description" rows="5"
+                        placeholder="Mô tả lỗi, nhu cầu nâng cấp hoặc bảo trì..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="device-condition">Tình trạng máy</label>
+                    <textarea id="device-condition" rows="4"
+                        placeholder="Ví dụ: máy nóng nhanh, pin chai, màn hình hơi sọc..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="appointment-date">Thời gian mong muốn</label>
+                    <input type="datetime-local" id="appointment-date">
+                </div>
+
+                <p class="service-request-note">
+                    Vui lòng mô tả càng rõ càng tốt để kỹ thuật viên hỗ trợ nhanh hơn.
+                </p>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit-service">Gửi yêu cầu</button>
+                    <a href="main.html#service" class="btn-back-service">Quay lại</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="../JS/core/app.js"></script>
+    <script src="../JS/core/session.js"></script>
+    <script src="../JS/features/layout/header.user.js"></script>
+    <script src="../JS/features/layout/cart.guard.js"></script>
+    <script src="../JS/features/repair/repair.api.js"></script>
+    <script src="../JS/pages/service-request.page.js"></script>
+</body>
+
+</html>

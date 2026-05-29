@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUI LEGION - Laptop LEGION GIÁ RẺ</title>
+    <link rel="shortcut icon" href="../Images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/all.min.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="home"></div>
+    <div id="products"></div>
+    <div id="service"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+
+
+
+    <script src="../JS/core/app.js"></script>
+    <script src="../JS/core/session.js"></script>
+    <script src="../JS/features/layout/header.user.js"></script>
+    <script src="../JS/features/layout/cart.guard.js"></script>
+    <script src="../JS/features/products/products.api.js"></script>
+    <script src="../JS/features/cart/cart.api.js"></script>
+    <script src="../JS/pages/products.page.js"></script>
+
+    <script>
+        function loadSection(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(html => {
+                    const el = document.getElementById(id);
+                    el.innerHTML = html;
+
+                    if (id === "header") {
+                        if (typeof setupHeaderUser === "function") {
+                            setupHeaderUser();
+                        }
+                        if (typeof setupCartGuard === "function") {
+                            setupCartGuard();
+                        }
+                    }
+
+                    if (id === "products") {
+                        if (typeof loadAndRenderProducts === "function") {
+                            loadAndRenderProducts(el);
+                        } else if (typeof setupProductsSection === "function") {
+                            setupProductsSection(el);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error("Lỗi tải " + file, error);
+                });
+        }
+
+        loadSection("header", "header.html");
+        loadSection("home", "home.html");
+        loadSection("products", "products.html");
+        loadSection("service", "service.html");
+        loadSection("contact", "contact.html");
+        loadSection("footer", "footer.html");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đơn Hàng Của Tôi - HUI LEGION</title>
+    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/user_center.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    
+</head>
+<div class="order-modal" id="my-order-detail-modal">
+  <div class="order-modal-content">
+    <div class="order-modal-header">
+      <h2>Chi tiết đơn hàng</h2>
+
+      <button class="order-modal-close" id="close-my-order-modal">
+        &times;
+      </button>
+    </div>
+
+    <div class="order-modal-body" id="my-order-detail-content"></div>
+  </div>
+</div>
+<body>
+    <div id="header"></div>
+    <div class="user-page">
+        <div class="user-card">
+            <div class="user-card-header">
+                <div>
+                    <h1>Đơn Hàng Của Tôi</h1>
+                    <p>Xem lịch sử mua hàng bằng tài khoản hiện tại.</p>
+                </div>
+                <div class="user-avatar">
+                    <i class="fa-solid fa-box"></i>
+                </div>
+            </div>
+            <div style="margin-top: 10px; text-align:right;">
+                <button id="btn-logout" class="btn-user btn-user-danger">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Thoát</span>
+                </button>
+            </div>
+
+            <div id="orders-empty" class="orders-empty" style="display:none;">
+                <i class="fa-regular fa-face-smile-wink"></i>
+                <p>Bạn chưa có đơn hàng nào.</p>
+            </div>
+
+            <div class="user-table-wrapper" id="orders-wrapper" style="display:none;">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>Mã đơn</th>
+                            <th>Ngày đặt</th>
+                            <th>Tổng tiền</th>
+                            <th>Trạng thái</th>
+                            <th>Chi tiết</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-body">
+                        <!-- JS render -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/core/app.js"></script>
+    <script src="../js/core/toast.js"></script>
+    <script src="../js/core/loading.js"></script>
+    <script src="../js/core/session.js"></script>
+    <script src="../js/features/layout/header.user.js"></script>
+    <script src="../js/features/user/orders.api.js"></script>
+    <script src="../js/pages/my-orders.page.js"></script>
+</body>
+
+</html>

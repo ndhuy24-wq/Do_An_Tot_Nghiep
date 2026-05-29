@@ -1,0 +1,33 @@
+<!--Products Section Starts-->
+<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <link rel="stylesheet" href="../css/loading.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<section class="products" id="products">
+    <h1 class="heading">Danh Sách <span>Sản Phẩm</span></h1>
+    <div class="product-advanced-filter" style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:12px;margin:20px auto;max-width:1100px;padding:16px;background:#fff;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.08);">
+        <input id="product-search-keyword" type="text" placeholder="Tìm theo tên, SKU, mô tả" style="padding:12px;border:1px solid #eee;border-radius:10px;">
+        <input id="product-search-min" type="number" placeholder="Giá từ" style="padding:12px;border:1px solid #eee;border-radius:10px;">
+        <input id="product-search-max" type="number" placeholder="Giá đến" style="padding:12px;border:1px solid #eee;border-radius:10px;">
+        <select id="product-search-sort" style="padding:12px;border:1px solid #eee;border-radius:10px;">
+            <option value="">Mới nhất</option>
+            <option value="price_asc">Giá tăng dần</option>
+            <option value="price_desc">Giá giảm dần</option>
+            <option value="name_asc">Tên A-Z</option>
+        </select>
+        <button id="btn-product-search" style="padding:12px 18px;border:none;border-radius:10px;background:#dc2626;color:#fff;font-weight:800;cursor:pointer;">Lọc</button>
+    </div>
+    <div class="box-container">
+    </div>
+</section>
+
+<script src="../js/core/app.js"></script>
+<script src="../js/core/toast.js"></script>
+    <script src="../js/core/loading.js"></script>
+<script src="../js/core/session.js"></script>
+<script src="../js/features/layout/header.user.js"></script>
+<script src="../js/features/layout/cart.guard.js"></script>
+<script src="../js/features/products/products.api.js"></script>
+<script src="../js/features/cart/cart.api.js"></script>
+<script src="../js/pages/products.page.js"></script>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - HUI LEGION</title>
+
+    <!-- Favicon + CSS giống login -->
+    <link rel="shortcut icon" href="../Images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/login_register.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.6.0-web/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header giống các trang khác -->
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fa-solid fa-bars"></label>
+        <a href="index.html" class="logo">HUI LEGION<span>.</span></a>
+
+        <nav class="navbar">
+            <a href="main.html#home">Trang Chủ</a>
+            <a href="main.html#about">Giới Thiệu</a>
+            <a href="main.html#products">Sản Phẩm</a>
+            <a href="main.html#service">Dịch Vụ</a>
+            <a href="main.html#contact">Liên Hệ</a>
+        </nav>
+
+        <div class="icons">
+            <a href="#" class="fa-solid fa-heart"></a>
+            <a href="cart.html" class="fa-solid fa-cart-shopping"></a>
+            <a href="login.html" class="fa-solid fa-user"></a>
+        </div>
+    </header>
+
+    <!-- Vùng đăng ký -->
+    <section class="auth-soft">
+        <!-- Bên trái: text giới thiệu (dùng lại như login, bạn muốn chỉnh thì sửa text thôi) -->
+        <div class="auth-soft-left">
+            <div class="soft-left-inner">
+                <div class="soft-title-small">HUI LEGION</div>
+                <h1 class="soft-title-big">
+                    Tham Gia <span>Cộng Đồng</span><br> Mua Sắm Gaming
+                </h1>
+                <p class="auth-desc">
+                    Tạo tài khoản để lưu đơn hàng, wishlist, nhận ưu đãi độc quyền
+                    và cập nhật các deal nóng nhất dành riêng cho game thủ LEGION.
+                </p>
+
+                <div class="soft-highlight-card">
+                    <div class="soft-tag">Ưu Đãi Thành Viên Mới</div>
+                    <h3>Giảm Thêm 5% Cho Đơn Hàng Đầu Tiên</h3>
+                    <div class="soft-stats-row">
+                        <div class="soft-stat">
+                            <div class="value">1.2K+</div>
+                            <div class="label">Thành Viên</div>
+                        </div>
+                        <div class="soft-stat">
+                            <div class="value">98%</div>
+                            <div class="label">Hài Lòng</div>
+                        </div>
+                        <div class="soft-stat">
+                            <div class="value">24/7</div>
+                            <div class="label">Hỗ Trợ</div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="soft-list">
+                    <li><i class="fa-solid fa-circle-check"></i>Lưu lịch sử & tình trạng đơn hàng</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Ưu đãi chỉ dành cho thành viên HUI LEGION</li>
+                    <li><i class="fa-solid fa-circle-check"></i>Nhận thông báo flash sale cực nhanh</li>
+                </ul>
+
+                <div class="soft-decor">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Đăng ký 30 giây – Nhận ưu đãi trọn đời</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bên phải: FORM ĐĂNG KÝ -->
+        <div class="auth-soft-right">
+            <div class="soft-form-wrapper">
+                <h2>Đăng Ký</h2>
+
+                <form id="register-form">
+                    <div class="soft-input">
+                        <label for="fullname">Họ và Tên</label>
+                        <input type="text" id="fullname" name="fullname" placeholder="Nhập Họ và Tên của bạn">
+                    </div>
+
+                    <div class="soft-input">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Nhập Email của bạn">
+                    </div>
+
+                    <div class="soft-input">
+                        <label for="password">Mật Khẩu</label>
+                        <input type="password" id="password" name="password" placeholder="Tạo mật khẩu">
+                    </div>
+
+                    <div class="soft-input">
+                        <label for="repassword">Nhập Lại Mật Khẩu</label>
+                        <input type="password" id="repassword" name="repassword" placeholder="Nhập lại mật khẩu">
+                    </div>
+
+                    <div class="soft-input" style="display:flex;align-items:center;gap:8px;margin-top:4px;">
+                        <input type="checkbox" id="agree" style="width:auto;">
+                        <label for="agree" style="margin:0;font-size:0.9rem;font-weight:400;font-size: 1.5rem;">
+                            Tôi đồng ý với <a href="#" style="color:#e53935;font-weight:600; font-size: 1.5rem;">Điều khoản sử dụng</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="soft-btn">Tạo Tài Khoản</button>
+
+                    <div class="soft-divider">
+                        <span>Hoặc</span>
+                    </div>
+
+                    <button type="button" class="soft-btn-outline">
+                        <i class="fa-brands fa-google" style="margin-right:6px;"></i>
+                        Đăng Ký Bằng Google
+                    </button>
+
+                    <div class="soft-switch">
+                        Đã có tài khoản?
+                        <a href="login.html">Đăng Nhập</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (nếu login đang có footer thì copy y chang qua) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>HUI LEGION</h3>
+            <p>Gaming Laptop Store - Uy tín cho cộng đồng game thủ.</p>
+            <div class="socials">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2024 HUI LEGION. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../JS/core/app.js"></script>
+    <script src="../JS/core/session.js"></script>
+    <script src="../JS/features/auth/auth.api.js"></script>
+    <script src="../JS/features/layout/header.user.js"></script>
+    <script src="../JS/features/layout/cart.guard.js"></script>
+    <script src="../JS/pages/register.page.js"></script>
+</body>
+
+</html>

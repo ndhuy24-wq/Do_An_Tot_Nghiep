@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUI LEGION - Laptop LEGION GIÁ RẺ</title>
+    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="home"></div>
+    <div id="products"></div>
+    <div id="service"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+
+
+
+    <script src="../js/core/app.js"></script>
+    <script src="../js/core/toast.js"></script>
+    <script src="../js/core/loading.js"></script>
+    <script src="../js/core/session.js"></script>
+    <script src="../js/features/layout/header.user.js"></script>
+    <script src="../js/features/layout/cart.guard.js"></script>
+    <script src="../js/features/products/products.api.js"></script>
+    <script src="../js/features/cart/cart.api.js"></script>
+    <script src="../js/pages/products.page.js"></script>
+
+    <script>
+        function loadSection(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(html => {
+                    const el = document.getElementById(id);
+                    el.innerHTML = html;
+
+                    if (id === "header") {
+                        if (typeof setupHeaderUser === "function") {
+                            setupHeaderUser();
+                        }
+                        if (typeof setupCartGuard === "function") {
+                            setupCartGuard();
+                        }
+                    }
+
+                    if (id === "products") {
+                        if (typeof bindProductFilters === "function") {
+                            bindProductFilters(el);
+                        }
+                        if (typeof loadAndRenderProducts === "function") {
+                            loadAndRenderProducts(el);
+                        } else if (typeof setupProductsSection === "function") {
+                            setupProductsSection(el);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error("Lỗi tải " + file, error);
+                });
+        }
+
+        loadSection("header", "header.html");
+        loadSection("home", "home.html");
+        loadSection("products", "products.html");
+        loadSection("service", "service.html");
+        loadSection("contact", "contact.html");
+        loadSection("footer", "footer.html");
+    </script>
+</body>
+
+</html>

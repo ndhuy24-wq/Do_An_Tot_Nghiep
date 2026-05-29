@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+
+# Java / Maven
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+*.log
+
+# Environment / secrets
+.env
+*.env
+application-local.properties
+
+# Node/cache if frontend tools are added later
+node_modules/
+dist/
+build/

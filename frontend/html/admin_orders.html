@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Đơn hàng - HUI LEGION Admin</title>
+    <link rel="shortcut icon" href="../images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/toast.css">
+    <link rel="stylesheet" href="../css/loading.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                HUI <span>LEGION</span> Admin
+            </div>
+
+            <ul class="admin-menu">
+                <li>
+                    <a href="admin.html">
+                        <i class="fa-solid fa-laptop"></i>
+                        <span> Quản Lý Sản Phẩm</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin_orders.html" class="active">
+                        <i class="fa-solid fa-receipt"></i>
+
+                        <span> Quản Lý Đơn Hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin_service_requests.html">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Quản Lý Dịch Vụ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="admin_accounts.html">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Quản Lý Tài Khoản</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="admin-sidebar-footer">
+                © 2025 HUI LEGION.
+            </div>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="admin-main">
+            <header class="admin-header">
+                <div>
+                    <h1>Đơn hàng</h1>
+                    <p>Theo dõi và quản lý các đơn đặt laptop trên HUI LEGION</p>
+                </div>
+                <div class="admin-header-user">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <span>Admin</span>
+                </div>
+            </header>
+
+            <!-- BỘ LỌC ĐƠN HÀNG -->
+            <section class="admin-section">
+                <div class="section-title">
+                    <h2>Bộ lọc đơn hàng</h2>
+                </div>
+
+                <form class="product-form" id="orders-filter-form">
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label for="filter-code">Mã đơn hàng</label>
+                            <input type="text" id="filter-code" placeholder="VD: HD00123">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filter-customer">Khách hàng</label>
+                            <input type="text" id="filter-customer" placeholder="Tên / Email khách hàng">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filter-status">Trạng thái</label>
+
+                            <select id="filter-status"
+                                style="padding: 11px; border-radius: 8px; border: 1px solid #ffb3b3;">
+
+                                <option value="">Tất cả</option>
+                                <option value="pending">Chờ xử lý</option>
+                                <option value="shipping">Đang giao</option>
+                                <option value="done">Hoàn thành</option>
+                                <option value="cancel">Đã hủy</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="filter-payment-status">
+                                TT Thanh Toán
+                            </label>
+
+                            <select id="filter-payment-status"
+                                style="padding: 11px; border-radius: 8px; border: 1px solid #ffb3b3;">
+
+                                <option value="">
+                                    Tất cả
+                                </option>
+
+                                <option value="UNPAID">
+                                    Chưa thanh toán
+                                </option>
+
+                                <option value="PAID">
+                                    Đã thanh toán
+                                </option>
+
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary" id="btn-filter-orders">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Lọc đơn hàng</span>
+                        </button>
+
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>Làm mới</span>
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" id="btn-export-orders-excel">
+                            <i class="fa-solid fa-file-excel"></i>
+                            <span>Xuất Excel</span>
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" id="btn-export-orders-pdf">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span>Xuất PDF</span>
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- DANH SÁCH ĐƠN HÀNG -->
+            <section class="admin-section">
+                <div class="section-title">
+                    <h2>Danh sách đơn hàng</h2>
+                    <span class="badge badge-outline" id="orders-count-badge">0 đơn</span>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Mã đơn</th>
+                                <th>Khách hàng</th>
+                                <th>Ngày đặt</th>
+                                <th>Tổng tiền</th>
+                                <th>PT Thanh Toán</th>
+                                <th>TT Thanh Toán</th>
+                                <th>Trạng thái</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-table-body">
+                            <tr>
+                                <td colspan="8">Đang tải đơn hàng...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination" id="orders-pagination"></div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL CHI TIẾT ĐƠN HÀNG -->
+    <div class="order-modal" id="order-detail-modal">
+        <div class="order-modal-content">
+            <div class="order-modal-header">
+                <div>
+                    <p>HUI LEGION Admin</p>
+                    <h2>Chi tiết đơn hàng</h2>
+                </div>
+
+                <button type="button" class="order-modal-close" id="close-order-modal" aria-label="Đóng">
+                    &times;
+                </button>
+            </div>
+
+            <div class="order-modal-body" id="order-detail-content"></div>
+        </div>
+    </div>
+
+    <script src="../js/core/app.js"></script>
+    <script src="../js/core/toast.js"></script>
+    <script src="../js/core/loading.js"></script>
+    <script src="../js/core/session.js"></script>
+    <script src="../js/features/layout/admin.guard.js"></script>
+    <script src="../js/features/user/orders.api.js"></script>
+    <script src="../js/pages/admin-orders.page.js"></script>
+</body>
+
+</html>
