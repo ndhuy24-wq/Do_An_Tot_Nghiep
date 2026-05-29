@@ -1105,3 +1105,108 @@ body.modal-open {
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+
+/* =========================================================
+   ADMIN MOBILE FIX - 2026
+   ========================================================= */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.table-wrapper,
+.admin-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    display: block;
+    width: 100%;
+  }
+
+  .admin-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: auto;
+    padding: 12px;
+  }
+
+  .admin-logo {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .admin-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .admin-menu a {
+    min-height: 46px;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .admin-menu a i {
+    width: auto;
+  }
+
+  .admin-sidebar-footer {
+    display: none;
+  }
+
+  .admin-main {
+    min-height: auto;
+    padding: 14px 10px 28px;
+  }
+
+  .admin-header {
+    border-radius: 16px;
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .admin-header-user {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-title {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-product-filter {
+    grid-template-columns: 1fr !important;
+  }
+
+  .admin-table {
+    min-width: 760px;
+  }
+
+  .btn,
+  .btn-primary,
+  .btn-secondary,
+  button {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .admin-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-menu a {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}

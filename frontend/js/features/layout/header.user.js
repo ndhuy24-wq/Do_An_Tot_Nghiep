@@ -75,6 +75,33 @@ window.HuiLegion = window.HuiLegion || {};
     `;
   }
 
+  function setupDropdownEvents(wrapper) {
+    const toggle = wrapper.querySelector(".header-user-toggle");
+    const menu = wrapper.querySelector(".header-user-menu");
+    if (!toggle || !menu || wrapper.dataset.dropdownReady === "1") return;
+
+    toggle.setAttribute("aria-haspopup", "true");
+    toggle.setAttribute("aria-expanded", "false");
+
+    toggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      document.querySelectorAll(".header-user-dropdown.open").forEach((item) => {
+        if (item !== wrapper) {
+          item.classList.remove("open");
+          item.querySelector(".header-user-toggle")?.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      const isOpen = wrapper.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    menu.addEventListener("click", (event) => event.stopPropagation());
+    wrapper.dataset.dropdownReady = "1";
+  }
+
   function enhanceHeader(headerEl) {
     const iconsDiv = headerEl.querySelector(".icons");
     if (!iconsDiv || iconsDiv.dataset.userEnhanced === "1") return;
@@ -91,6 +118,7 @@ window.HuiLegion = window.HuiLegion || {};
       wrapper.className = "header-user-dropdown";
       wrapper.innerHTML = buildLoggedInMenu(user);
       iconsDiv.appendChild(wrapper);
+      setupDropdownEvents(wrapper);
       iconsDiv.dataset.userEnhanced = "1";
 
       const logoutBtn = wrapper.querySelector(".user-logout-btn");
@@ -108,12 +136,26 @@ window.HuiLegion = window.HuiLegion || {};
     wrapper.className = "header-user-dropdown";
     wrapper.innerHTML = buildGuestMenu();
     loginIcon.replaceWith(wrapper);
+    setupDropdownEvents(wrapper);
     iconsDiv.dataset.userEnhanced = "1";
   }
 
   function setupHeaderUser(doc = document) {
     doc.querySelectorAll("header").forEach(enhanceHeader);
   }
+
+  document.addEventListener("click", () => {
+    document.querySelectorAll(".header-user-dropdown.open").forEach((wrapper) => {
+      wrapper.classList.remove("open");
+      wrapper.querySelector(".header-user-toggle")?.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const navLink = event.target.closest("header .navbar a");
+    const toggler = document.querySelector("header #toggler");
+    if (navLink && toggler) toggler.checked = false;
+  });
 
   namespace.headerUser = { setupHeaderUser };
   window.setupHeaderUser = setupHeaderUser;
