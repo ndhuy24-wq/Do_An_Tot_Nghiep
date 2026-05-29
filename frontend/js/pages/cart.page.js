@@ -87,7 +87,6 @@
             <img src="${namespace.utils.resolveAssetUrl(item.imageUrl)}" alt="">
             <div class="info">
               <h3>${item.name || ""}</h3>
-              <p class="price">${namespace.utils.formatMoney(item.price)}</p>
             </div>
           </div>
 
