@@ -32,6 +32,11 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 section {
     padding: 2rem 9%;
 }
@@ -309,6 +314,8 @@ header .fa-bars {
     position: relative;
     overflow: hidden;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
 }
 
 .products .box-container .box:hover {
@@ -378,11 +385,16 @@ header .fa-bars {
 .products .box-container .box .content {
     padding: 2rem;
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .products .box-container .box .content h3 {
     font-size: 2.5rem;
     color: #333;
+    margin-bottom: auto;
 }
 
 .products .box-container .box .content .price {
@@ -882,10 +894,7 @@ footer .social-links a:hover {
     font-size: 1.3rem;
 }
 
-
-
-/* ===== HEADER USER (text only) ===== */
-
+/* ===== HEADER USER ===== */
 .header-user-dropdown {
     position: relative;
     display: inline-flex;
@@ -907,309 +916,34 @@ footer .social-links a:hover {
 }
 
 .header-user-toggle:hover {
-    background: #f4f4f4;
-}
-
-.header-user-name {
-    color: #222;
-    max-width: 150px;         
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 2rem;
-    font-weight: 1000;
-}
-
-.header-user-caret {
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* ===== APPLE STYLE USER DROPDOWN ===== */
-
-.header-user-dropdown .header-user-menu {
-  min-width: 280px;
-  padding: 10px;
-
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
-
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 22px;
-
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.16),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
-
-.header-user-dropdown .header-user-info {
-  padding: 14px 14px 13px;
-  margin-bottom: 8px;
-
-  border-radius: 16px;
-  background: rgba(246, 247, 249, 0.82);
-}
-
-.header-user-dropdown .header-user-info .user-name {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #111827;
-}
-
-.header-user-dropdown .header-user-info .user-email {
-  margin-top: 4px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.35;
-  color: #6b7280;
-}
-
-.header-user-dropdown .user-menu-divider {
-  border: 0;
-  height: 1px;
-  margin: 8px 6px;
-  background: rgba(0, 0, 0, 0.08);
-}
-
-.header-user-dropdown .user-menu-item {
-  display: grid;
-  grid-template-columns: 32px 1fr;
-  align-items: center;
-  column-gap: 12px;
-
-  width: 100%;
-  min-height: 46px;
-  padding: 7px 12px;
-  margin: 3px 0;
-
-  border: 0;
-  border-radius: 15px;
-  background: transparent;
-
-  color: #1f2937;
-  text-decoration: none;
-  text-align: left;
-  cursor: pointer;
-
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.35;
-
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    transform 0.18s ease,
-    box-shadow 0.18s ease;
-}
-
-.header-user-dropdown .user-menu-item i {
-  width: 32px;
-  height: 32px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 12px;
-  background: rgba(242, 243, 245, 0.95);
-
-  font-size: 15px;
-  line-height: 1;
-  color: #4b5563;
-
-  transition:
-    background 0.18s ease,
-    color 0.18s ease,
-    transform 0.18s ease;
-}
-
-.header-user-dropdown .user-menu-item span {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.35;
-  white-space: nowrap;
-}
-
-.header-user-dropdown .user-menu-item:hover {
-  background: rgba(0, 0, 0, 0.045);
-  color: #111827;
-  transform: translateX(3px);
-}
-
-.header-user-dropdown .user-menu-item:hover i {
-  background: #ffffff;
-  color: var(--main-color);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transform: scale(1.03);
-}
-
-.header-user-dropdown .admin-menu-item {
-  color: var(--main-color);
-}
-
-.header-user-dropdown .admin-menu-item i {
-  background: rgba(229, 57, 53, 0.1);
-  color: var(--main-color);
-}
-
-.header-user-dropdown .user-logout-btn {
-  margin-top: 8px;
-  color: #dc2626;
-}
-
-.header-user-dropdown .user-logout-btn i {
-  background: #fff1f2;
-  color: #dc2626;
-}
-
-.header-user-dropdown .user-logout-btn:hover {
-  background: #fff1f2;
-  color: #dc2626;
-}
-
-
-/* ================================
-   HUI LEGION - USER DROPDOWN EFFECT
-   ================================ */
-
-/* Nút tên user trên header */
-.header-user-dropdown {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    font-size: 1.4rem;
-}
-
-.header-user-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 16px;
-    background: #ffffff;
-    border-radius: 999px;
-    border: 1px solid #eeeeee;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    transition:
-        background 0.18s ease,
-        box-shadow 0.18s ease,
-        border-color 0.18s ease,
-        transform 0.18s ease;
-}
-
-.header-user-name {
-    font-size: 1.55rem;
-    font-weight: 700;
-    color: #111;
-}
-
-/* Hover: hơi nhô lên + viền đỏ nhẹ */
-.header-user-toggle:hover {
     background: #fff5f5;
     border-color: #e53935;
     box-shadow: 0 4px 14px rgba(229,57,53,0.25);
     transform: translateY(-1px);
 }
 
-/* Mũi tên xoay khi đặt chuột vào */
+.header-user-name {
+    color: #111;
+    max-width: 150px;         
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
 .header-user-caret {
     font-size: 1.1rem;
     color: #666;
     transition: transform 0.22s ease;
 }
 
-.header-user-dropdown:hover .header-user-caret {
+.header-user-dropdown:hover .header-user-caret,
+.header-user-dropdown.open .header-user-caret {
     transform: rotate(180deg);
 }
 
-/* ========== DROPDOWN ========== */
-
-.header-user-menu {
-    position: absolute;
-    top: 110%;
-    right: 0;
-    width: 220px;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 10px 0;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-      
-
-    /* hiệu ứng xuất hiện */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px) scale(0.98);
-    transform-origin: top right;
-    transition:
-        opacity 0.2s ease,
-        transform 0.2s ease,
-        visibility 0.2s;
-}
-
-/* Khi hover vào ô Huy */
-.header-user-dropdown:hover .header-user-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0) scale(1);
-}
-
-/* phần tên + email trong dropdown */
-.header-user-info {
-    padding: 8px 14px;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.header-user-info .user-name {
-    font-size: 1.3rem;
-    font-weight: 700;
-}
-
-.header-user-info .user-email {
-    font-size: 1.05rem;
-    color: #777;
-}
-
-/* ========== ITEMS TRONG MENU Dropdown ========== */
-
-.user-menu-item {
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    padding: 8px 14px !important;
-    font-size: 1.5rem !important;
-    color: #333 !important;
-    width: 100% !important;                  /* full width */
-    box-sizing: border-box !important;       /* tính cả padding vào width */
-    border-radius: 6px !important;           /* bo nhẹ để nền khớp */
-    background: transparent !important;
-    transition: background 0.15s ease, color 0.15s ease;
-    white-space: nowrap !important;
-    overflow: hidden !important;             /* tránh chữ thò ra */
-}
-
-.user-menu-item:hover {
-    background: #f2f2f2 !important;           /* nền hover */
-    color: #e53935 !important;               /* đỏ gaming */
-    transform: none !important;              
-}
-
-.user-menu-item:hover i {
-    color: #e53935 !important;
-}
-
-/* Đồng bộ icon */
-.user-menu-item i {
-    font-size: 1.5rem !important;
-    width: 18px !important;
-    color: #555 !important;
-    text-align: center !important;
-}
-
-/* Guest dropdown: chỉ icon user, không tên */
-
+/* Guest Toggle */
 .header-user-guest-toggle {
     padding: 0;
     background: transparent;
@@ -1219,36 +953,150 @@ footer .social-links a:hover {
 }
 
 .header-user-guest-toggle i {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: #222;
 }
 
-/* Hover icon đổi màu nhẹ */
 .header-user-dropdown:hover .header-user-guest-toggle i {
     color: #e53935;
 }
-.icons .fa-user {
-    font-size: 2.5rem !important;   /* to hơn */
-    line-height: 1 !important;
+
+/* ===== DROPDOWN MENU ===== */
+.header-user-menu,
+.header-user-dropdown .header-user-menu {
+    position: absolute;
+    top: 115%;
+    right: 0;
+    min-width: 260px;
+    padding: 10px;
+
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+    /* Animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.98);
+    transform-origin: top right;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 2000;
 }
 
-/* =========================================================
-   MOBILE RESPONSIVE FIX & GLOBAL ADJUSTMENTS
-   ========================================================= */
-body {
-    overflow-x: hidden;
-}
-
-.header-user-dropdown.open .header-user-menu,
-.header-user-dropdown:focus-within .header-user-menu {
+.header-user-dropdown:hover .header-user-menu,
+.header-user-dropdown.open .header-user-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0) scale(1);
 }
 
-.header-user-dropdown.open .header-user-caret,
-.header-user-dropdown:focus-within .header-user-caret {
-    transform: rotate(180deg);
+.header-user-dropdown .header-user-info {
+    padding: 14px;
+    margin-bottom: 8px;
+    border-radius: 14px;
+    background: rgba(246, 247, 249, 0.9);
+}
+
+.header-user-dropdown .header-user-info .user-name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.35;
+    color: #111827;
+}
+
+.header-user-dropdown .header-user-info .user-email {
+    margin-top: 4px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.header-user-dropdown .user-menu-divider {
+    border: 0;
+    height: 1px;
+    margin: 8px 6px;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.header-user-dropdown .user-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    margin: 3px 0;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: #1f2937;
+    text-decoration: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: inherit;
+    transition: all 0.18s ease;
+}
+
+.header-user-dropdown .user-menu-item i {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(242, 243, 245, 0.95);
+    font-size: 1.4rem;
+    color: #4b5563;
+    transition: all 0.18s ease;
+}
+
+.header-user-dropdown .user-menu-item span {
+    white-space: nowrap;
+}
+
+.header-user-dropdown .user-menu-item:hover {
+    background: rgba(0, 0, 0, 0.04);
+    color: #111827;
+    transform: translateX(3px);
+}
+
+.header-user-dropdown .user-menu-item:hover i {
+    background: #ffffff;
+    color: var(--primary-color, #E42022);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: scale(1.05);
+}
+
+.header-user-dropdown .admin-menu-item {
+    color: var(--primary-color, #E42022);
+}
+
+.header-user-dropdown .admin-menu-item i {
+    background: rgba(228, 32, 34, 0.1);
+    color: var(--primary-color, #E42022);
+}
+
+.header-user-dropdown .user-logout-btn {
+    margin-top: 3px;
+    color: #dc2626;
+}
+
+.header-user-dropdown .user-logout-btn i {
+    background: #fff1f2;
+    color: #dc2626;
+}
+
+.header-user-dropdown .user-logout-btn:hover {
+    background: #fff1f2;
+    color: #dc2626;
 }
 
 @media(max-width:991px) {
@@ -1342,7 +1190,8 @@ body {
     }
 
     .products .box-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 
     .service-container {
@@ -1383,6 +1232,18 @@ body {
 
     .heading {
         font-size: 3.2rem;
+    }
+
+    .products .box-container {
+        gap: 1rem;
+    }
+    
+    .products .box-container .box .image img {
+        height: 18rem;
+    }
+    
+    .products .box-container .box .content {
+        padding: 1rem;
     }
 
     .home .content h3 {

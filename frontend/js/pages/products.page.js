@@ -26,7 +26,6 @@
         <div class="image">
           <img
             src="${namespace.utils.resolveAssetUrl(product.imageUrl)}"
-            style="height: 400px; width: 400px;"
             alt="${product.name || ""}"
           >
           <div class="icons">
