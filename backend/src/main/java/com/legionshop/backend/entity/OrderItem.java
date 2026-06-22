@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "order_items")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Thuc the (Entity) anh xa bang co so du lieu: OrderItem.
+ */
 public class OrderItem {
 
     @Id

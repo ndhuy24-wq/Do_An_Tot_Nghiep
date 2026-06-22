@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: forgot-password.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function forgotPasswordPageModule(namespace) {
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("forgot-password-form");

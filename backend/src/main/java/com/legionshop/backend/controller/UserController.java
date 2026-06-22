@@ -11,6 +11,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/user") // Endpoint chung cho các hành động của user
 @CrossOrigin(origins = "*")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Controller dinh nghia cac API endpoint lien quan den User.
+ */
 public class UserController {
 
     private final UserService userService;

@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: products.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function productsPageModule(namespace) {
   function tryGetLoginUser() {
     const user = namespace.session?.getCurrentUser?.();

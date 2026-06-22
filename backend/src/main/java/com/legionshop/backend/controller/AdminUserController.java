@@ -12,6 +12,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/admin/users")
 @CrossOrigin(origins = "*")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Controller dinh nghia cac API endpoint lien quan den AdminUser.
+ */
 public class AdminUserController {
 
     private final UserService userService;

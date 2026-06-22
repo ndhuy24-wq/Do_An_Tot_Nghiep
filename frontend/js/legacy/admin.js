@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: admin.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 // JS/admin.js
 (() => {
   const API_BASE_URL =

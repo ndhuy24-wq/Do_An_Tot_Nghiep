@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: admin-orders.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function adminOrdersPageModule(namespace) {
     let allOrders = [];
     let currentPage = 1;
@@ -522,7 +526,7 @@
         document
             .getElementById("orders-filter-form")
             ?.addEventListener("reset", () => {
-                setTimeout(() => { currentPage = 1; renderTable(); }, 0);
+                setTimeout(() => { currentPage = 1; loadOrders(); }, 0);
             });
 
         document

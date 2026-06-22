@@ -18,6 +18,10 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/products")
 @CrossOrigin(origins = "*")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Controller dinh nghia cac API endpoint lien quan den Product.
+ */
 public class ProductController {
     private final ProductService productService;
     public ProductController(ProductService productService) { this.productService = productService; }

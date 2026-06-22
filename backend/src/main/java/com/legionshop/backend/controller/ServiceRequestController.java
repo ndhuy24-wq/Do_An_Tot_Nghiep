@@ -12,6 +12,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/service-requests")
 @CrossOrigin(origins = "*")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Controller dinh nghia cac API endpoint lien quan den ServiceRequest.
+ */
 public class ServiceRequestController {
 
     private final ServiceRequestService serviceRequestService;

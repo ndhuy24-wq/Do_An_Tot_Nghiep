@@ -5,6 +5,10 @@ import java.util.List; // Cần import List
 
 @Entity
 @Table(name = "products")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Thuc the (Entity) anh xa bang co so du lieu: Product.
+ */
 public class Product {
 
     @Id

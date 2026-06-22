@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: admin-dashboard.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function adminDashboardPageModule(namespace) {
   function setText(id, value) {
     const el = document.getElementById(id);

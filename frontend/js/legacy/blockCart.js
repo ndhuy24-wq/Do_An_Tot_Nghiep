@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: blockCart.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 // js/blockCart.js
 (() => {
   // CART BACKEND (DB) - KHÔNG localStorage

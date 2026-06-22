@@ -7,6 +7,10 @@ import jakarta.persistence.*;
         name = "cart_items",
         uniqueConstraints = @UniqueConstraint(columnNames = {"cart_id", "product_id"})
 )
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Thuc the (Entity) anh xa bang co so du lieu: CartItem.
+ */
 public class CartItem {
 
     @Id

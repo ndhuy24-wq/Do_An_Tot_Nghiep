@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: headerUser.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 // JS/headerUser.js
 // Xử lý logic hiển thị user/dropdown và thêm Admin Guard
 

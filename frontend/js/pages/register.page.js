@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: register.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function registerPageModule(namespace) {
   document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("register-form");

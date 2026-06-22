@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: productsPage.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 // JS/productsPage.js
 (() => {
   // ✅ Không khai báo API_BASE_URL const toàn cục; dùng hàm để tránh lỗi trùng tên giữa các file

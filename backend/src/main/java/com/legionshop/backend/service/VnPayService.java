@@ -11,6 +11,10 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Service xu ly nghiep vu logic cho VnPay.
+ */
 public class VnPayService {
     @Value("${vnpay.tmn-code:}")
     private String tmnCode;

@@ -12,6 +12,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/auth")
 @CrossOrigin(origins = "*")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Controller dinh nghia cac API endpoint lien quan den Auth.
+ */
 public class AuthController {
     private final UserService userService;
     private final TokenService tokenService;

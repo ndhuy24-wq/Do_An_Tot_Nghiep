@@ -4,6 +4,10 @@ import com.legionshop.backend.entity.Order;
 import org.springframework.stereotype.Service;
 
 @Service
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Service xu ly nghiep vu logic cho Email.
+ */
 public class EmailService {
 
     /**

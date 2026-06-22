@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: user.api.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 window.HuiLegion = window.HuiLegion || {};
 
 (function userApiModule(namespace) {

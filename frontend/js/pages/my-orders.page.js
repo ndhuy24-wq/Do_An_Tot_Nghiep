@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: my-orders.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function myOrdersPageModule(namespace) {
 
   function requireLoginUser() {

@@ -5,6 +5,10 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "laptop_service_requests")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Service xu ly nghiep vu logic cho Request.
+ */
 public class ServiceRequest {
 
     @Id

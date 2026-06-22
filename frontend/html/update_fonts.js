@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: update_fonts.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 const fs = require('fs');
 const path = require('path');
 

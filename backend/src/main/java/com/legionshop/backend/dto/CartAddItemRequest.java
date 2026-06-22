@@ -1,6 +1,10 @@
 package com.legionshop.backend.dto;
 
 
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Data Transfer Object (DTO) dung de truyen nhan du lieu: CartAddItemRequest.
+ */
 public class CartAddItemRequest {
 
     private String userEmail;

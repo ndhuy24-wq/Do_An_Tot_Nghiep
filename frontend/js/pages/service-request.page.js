@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: service-request.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function serviceRequestPageModule(namespace) {
   function getCurrentUser() {
     return namespace.session?.getCurrentUser?.() || null;

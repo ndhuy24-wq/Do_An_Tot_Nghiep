@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: toast.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function toastModule(namespace) {
     namespace = namespace || (window.HuiLegion = window.HuiLegion || {});
 

@@ -14,6 +14,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/orders")
 @CrossOrigin(origins = "*")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Controller dinh nghia cac API endpoint lien quan den Order.
+ */
 public class OrderController {
 
     private final OrderService orderService;

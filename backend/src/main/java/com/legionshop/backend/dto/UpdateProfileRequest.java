@@ -1,6 +1,10 @@
 package com.legionshop.backend.dto;
 
 // DTO chứa thông tin mà người dùng muốn cập nhật
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Data Transfer Object (DTO) dung de truyen nhan du lieu: UpdateProfileRequest.
+ */
 public class UpdateProfileRequest {
 
     private String fullname;

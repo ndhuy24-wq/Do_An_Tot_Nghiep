@@ -13,6 +13,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Service xu ly nghiep vu logic cho Request.
+ */
 public class ServiceRequestService {
 
     private final ServiceRequestRepository serviceRequestRepository;

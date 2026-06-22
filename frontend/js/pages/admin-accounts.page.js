@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: admin-accounts.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function adminAccountsPageModule(namespace) {
   let allUsers = [];
   let editingUserId = null;
@@ -221,7 +225,10 @@
     document.getElementById("acc-note")?.setAttribute("readonly", "readonly");
 
     form.addEventListener("submit", handleSubmit);
-    document.getElementById("btn-reset-account")?.addEventListener("click", resetForm);
+    document.getElementById("btn-reset-account")?.addEventListener("click", () => {
+      resetForm();
+      loadUsers();
+    });
 
     resetForm();
     loadUsers();

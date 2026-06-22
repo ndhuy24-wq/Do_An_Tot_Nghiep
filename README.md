@@ -323,57 +323,8 @@ Khi deploy backend, nhớ sửa URL API trong frontend nếu không còn dùng `
 
 ---
 
-## 13. Checklist trước khi nộp / deploy
 
-### Frontend
-
-- [ ] Mở `home.html` bằng Live Server
-- [ ] Kiểm tra console không còn lỗi đỏ
-- [ ] Test đăng nhập / đăng ký
-- [ ] Test lọc sản phẩm
-- [ ] Test giỏ hàng
-- [ ] Test đặt hàng
-- [ ] Test trang admin
-
-### Backend
-
-- [ ] Backend chạy không lỗi
-- [ ] Kết nối được MySQL
-- [ ] API auth hoạt động
-- [ ] API sản phẩm hoạt động
-- [ ] API đơn hàng hoạt động
-- [ ] Phân quyền admin/user đúng
-- [ ] Đăng nhập admin rồi thử thêm/sửa/xóa sản phẩm
-- [ ] Đổi `APP_TOKEN_SECRET` nếu deploy public
-
-### Database
-
-- [ ] Import `database.sql` thành công
-- [ ] Có dữ liệu sản phẩm
-- [ ] Có dữ liệu tài khoản demo hoặc tài khoản admin
-- [ ] Có dữ liệu đơn hàng test nếu cần báo cáo
-
----
-
-## 14. Nội dung đã cleanup trong bản này
-
-- Xóa `.git/`
-- Xóa `.idea/`
-- Xóa `backend/target/`
-- Ẩn cấu hình database bằng biến môi trường
-- Chặn API quản trị bằng access token có chữ ký, không còn tin vào header role đơn thuần
-- Tắt trả reset token trực tiếp mặc định trong API quên mật khẩu
-- Gộp README rời thành một README chính
-- Đổi `HTML`, `CSS`, `JS`, `Images`, `Components` thành `frontend/html`, `frontend/css`, `frontend/js`, `frontend/images`, `frontend/components`
-- Đổi `db` thành `database`
-- Đổi `legion-shop-backend` thành `backend`
-- Chuẩn hóa đường dẫn trong HTML/CSS/JS sang folder mới
-- Chuyển Font Awesome sang CDN để project nhẹ và sạch hơn
-- Thêm `.gitignore`
-
----
-
-## 15. Gợi ý nâng cấp tiếp theo
+## 13. Gợi ý nâng cấp tiếp theo
 
 - Docker hóa backend + database
 - Thêm GitHub Actions build tự động

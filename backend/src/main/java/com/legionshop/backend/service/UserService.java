@@ -13,6 +13,10 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Service xu ly nghiep vu logic cho User.
+ */
 public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;

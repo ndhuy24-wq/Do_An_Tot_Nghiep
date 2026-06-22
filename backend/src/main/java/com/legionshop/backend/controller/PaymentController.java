@@ -9,6 +9,10 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/payments")
 @CrossOrigin(origins = "*")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Controller dinh nghia cac API endpoint lien quan den Payment.
+ */
 public class PaymentController {
     private final VnPayService vnPayService;
 

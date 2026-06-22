@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: login.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 // JS/login.js
 // Xử lý logic đăng nhập và điều hướng phân quyền (ROLE_ADMIN/ROLE_USER)
 

@@ -2,6 +2,10 @@ package com.legionshop.backend.dto;
 
 import java.util.List;
 
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Data Transfer Object (DTO) dung de truyen nhan du lieu: ProductRequest.
+ */
 public class ProductRequest {
     private String name;
     private String sku;

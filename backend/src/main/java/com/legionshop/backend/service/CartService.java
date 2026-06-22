@@ -16,6 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Service xu ly nghiep vu logic cho Cart.
+ */
 public class CartService {
 
     private final CartRepository cartRepository;

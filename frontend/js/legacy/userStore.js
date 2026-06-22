@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: userStore.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 // js/userStore.js
 // CHỈ quản lý session user + gọi API
 // KHÔNG dùng localStorage cho users / profile / orders

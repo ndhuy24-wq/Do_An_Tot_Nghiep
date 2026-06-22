@@ -8,6 +8,10 @@ import java.util.List;
 
 @Entity
 @Table(name = "orders")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Thuc the (Entity) anh xa bang co so du lieu: Order.
+ */
 public class Order {
 
     @Id

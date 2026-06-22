@@ -11,6 +11,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/cart")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Controller dinh nghia cac API endpoint lien quan den Cart.
+ */
 public class CartController {
 
     private final CartService cartService;

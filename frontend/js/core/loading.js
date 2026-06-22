@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: loading.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function loadingModule(namespace) {
   function ensureEl() {
     let el = document.querySelector(".global-loading");

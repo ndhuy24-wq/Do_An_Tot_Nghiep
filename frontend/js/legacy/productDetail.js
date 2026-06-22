@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: productDetail.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 // JS/productDetail.js
 function getApiBaseUrl() {
   return (

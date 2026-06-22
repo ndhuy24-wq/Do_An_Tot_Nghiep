@@ -5,6 +5,10 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "order_status_histories")
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Thuc the (Entity) anh xa bang co so du lieu: OrderStatusHistory.
+ */
 public class OrderStatusHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -18,6 +18,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Service xu ly nghiep vu logic cho Product.
+ */
 public class ProductService {
 
     private final ProductRepository productRepository;

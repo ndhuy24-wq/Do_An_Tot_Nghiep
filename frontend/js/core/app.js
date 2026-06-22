@@ -1,6 +1,7 @@
 window.APP_CONFIG = window.APP_CONFIG || {
- API_BASE_URL: "https://do-an-tot-nghiep-gb39.onrender.com/api"
+  API_BASE_URL: "https://do-an-tot-nghiep-gb39.onrender.com/api"
 };
+
 
 window.HuiLegion = window.HuiLegion || {};
 

@@ -2,6 +2,10 @@ package com.legionshop.backend.dto;
 
 import java.time.LocalDateTime;
 
+/**
+ * Ma nguon thuoc du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * Service xu ly nghiep vu logic cho RequestResponse.
+ */
 public class ServiceRequestResponse {
 
     private Long id;

@@ -1,3 +1,7 @@
+/**
+ * Du an LEGION SHOP - Website ban laptop/phu kien gaming.
+ * File: admin-service-requests.page.js - Xu ly logic phia client (Frontend JavaScript).
+ */
 (function adminServiceRequestsPageModule(namespace) {
   let currentRequestId = null;
   let rawItems = [];
